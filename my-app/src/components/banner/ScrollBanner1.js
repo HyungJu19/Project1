@@ -34,7 +34,7 @@ function ScrollBanner1() {
     >
       <Flex direction="column" justify="center" align="center" height="100%">
         <Text fontSize="4xl" fontWeight="bold" mb={4}>
-          Welcome to AngProject
+          Welcome to AngProject111
         </Text>
         <Text fontSize="xl" mb={6}>
           Explore the future of technology and build amazing things with us.
