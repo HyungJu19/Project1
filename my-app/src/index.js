@@ -8,7 +8,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ChakraProvider>
-      <Router basename='/Project1'>
+    <Router basename="/Project1/my-app">
       <App />
       </Router>
     </ChakraProvider>
