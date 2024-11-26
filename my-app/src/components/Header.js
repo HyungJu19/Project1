@@ -5,19 +5,19 @@ function Header() {
   return (
     <Box bg="gray.100" p={4} boxShadow="sm">
       <Stack direction="row" spacing={6} justifyContent="center">
-        <Link href="/Project1/banner" fontWeight="bold">
+        <Link href="/banner" fontWeight="bold">
           배너
         </Link>
-        <Link href="/Project1/button" fontWeight="bold">
+        <Link href="/button" fontWeight="bold">
           버튼
         </Link>
-        <Link href="/Project1/togle" fontWeight="bold">
+        <Link href="/togle" fontWeight="bold">
           토글
         </Link>
-        <Link href="/Project1/textbox" fontWeight="bold">
+        <Link href="/textbox" fontWeight="bold">
           텍스트상자
         </Link>
-        <Link href="/Project1/ba" fontWeight="bold">
+        <Link href="/ba" fontWeight="bold">
           바
         </Link>
         <Link href="#" fontWeight="bold">
