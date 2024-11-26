@@ -14,11 +14,11 @@ function App() {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
 
        <Route path='/' element={<Main />} />
-        <Route path='/Project1/banner' element={<BannerPage />} />
-        <Route path='/Project1/button' element={<ButtonPage />} />
-        <Route path='/Project1/togle' element={<ToglePage />} />
-        <Route path='/Project1/textbox' element={<TextBox />} />
-        <Route path='/Project1/ba' element={<Ba />} />
+        <Route path='/banner' element={<BannerPage />} />
+        <Route path='/button' element={<ButtonPage />} />
+        <Route path='/togle' element={<ToglePage />} />
+        <Route path='/textbox' element={<TextBox />} />
+        <Route path='/ba' element={<Ba />} />
   
    
     </BrowserRouter>
