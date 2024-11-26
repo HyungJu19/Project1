@@ -5,20 +5,20 @@ function Header() {
   return (
     <Box bg="gray.100" p={4} boxShadow="sm">
       <Stack direction="row" spacing={6} justifyContent="center">
-        <Link href="/" fontWeight="bold">
-          Home
+        <Link href="/Project1/banner" fontWeight="bold">
+          배너
         </Link>
-        <Link href="/about" fontWeight="bold">
-          About
+        <Link href="/Project1/button" fontWeight="bold">
+          버튼
         </Link>
-        <Link href="#" fontWeight="bold">
-          청첩장
+        <Link href="/Project1/togle" fontWeight="bold">
+          토글
         </Link>
-        <Link href="#" fontWeight="bold">
-          감사장
+        <Link href="/Project1/textbox" fontWeight="bold">
+          텍스트상자
         </Link>
-        <Link href="#" fontWeight="bold">
-          돌잔치
+        <Link href="/Project1/ba" fontWeight="bold">
+          바
         </Link>
         <Link href="#" fontWeight="bold">
           초대장

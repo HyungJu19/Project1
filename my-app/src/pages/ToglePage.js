@@ -3,15 +3,15 @@ import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 import Tabs1 from '../components/Tabs1'
 
-function ContactPage() {
+function ToglePage() {
     return <>
     <Navbar />
     <Header />
  
     <Tabs1 />
-    <h1>welcome to Ang Project! AboutPage111</h1>
+    
     </>
 
 }
 
-export default ContactPage
+export default ToglePage;

@@ -18,7 +18,7 @@ import CardStyleBanner from '../components/banner/CardStyleBanner';
 import ShadowEffectBanner from '../components/banner/ShadowEffectBanner';
 
 
-function HomePage() {
+function BannerPage() {
   return (
     <>
     <Navbar />
@@ -29,15 +29,25 @@ function HomePage() {
       <Heading as="h1" mb={4}>
        
       </Heading>
+      <small>MainBanner1</small>
     <MainBanner1 />
+    <small>Banner1</small>
     <Banner1 />
+    <small>Banner2</small>
     <Banner2 />
+    <small>CenterTextBanner</small>
     <CenterTextBanner />
+    <small>GradientBanner</small>
     <GradientBanner />
+    <small>ScrollBanner1</small>
     <ScrollBanner1 />
+    <small>ImageBanner</small>
     <ImageBanner />
+    <small>HoverAnimationBanner</small>
     <HoverAnimationBanner />
+    <small>CardStyleBanner</small>
     <CardStyleBanner />
+    <p>ShadowEffectBanner</p>
     <ShadowEffectBanner />
       <Text fontSize="lg" mb={4}>
         앙프 만에 특별함 
@@ -51,4 +61,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default BannerPage;
