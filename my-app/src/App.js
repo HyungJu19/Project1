@@ -11,7 +11,7 @@ import Main from './pages/Main';
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Router basename="/Project1">
       <Routes>
        <Route path='/' element={<Main />} />
         <Route path='/banner' element={<BannerPage />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path='/ba' element={<Ba />} />
   
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
