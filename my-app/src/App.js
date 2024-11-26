@@ -6,6 +6,7 @@ import ButtonPage from './pages/ButtonPage';
 import ToglePage from './pages/ToglePage';
 import TextBox from './pages/TextBox';
 import Ba from './pages/Ba';
+import Main from './pages/Main';
 
 
 function App() {
