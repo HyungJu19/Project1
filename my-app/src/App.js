@@ -6,17 +6,19 @@ import ButtonPage from './pages/ButtonPage';
 import ToglePage from './pages/ToglePage';
 import TextBox from './pages/TextBox';
 import Ba from './pages/Ba';
+import Main from './pages/Main';
 
 
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
-        <Route path='/Project1/banner' element={<BannerPage />} />
-        <Route path='/Project1/button' element={<ButtonPage />} />
-        <Route path='/Project1/togle' element={<ToglePage />} />
-        <Route path='/Project1/textbox' element={<TextBox />} />
-        <Route path='/Project1/ba' element={<Ba />} />
+       <Route path='/' element={<Main />} />
+        <Route path='/banner' element={<BannerPage />} />
+        <Route path='/button' element={<ButtonPage />} />
+        <Route path='/togle' element={<ToglePage />} />
+        <Route path='/textbox' element={<TextBox />} />
+        <Route path='/ba' element={<Ba />} />
   
       </Routes>
     </BrowserRouter>
