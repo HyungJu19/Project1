@@ -4,14 +4,14 @@ import Header from '../components/Header';
 
 import Tabs1 from '../components/Tabs1';
 
-function AboutPage() {
+function TextBox() {
     
     return <>
     <Navbar />
     <Header />
 
     <Tabs1 />
-    <h1>welcome to Ang Project! AboutPage</h1>
+ 
     </>
 
     
@@ -19,4 +19,4 @@ function AboutPage() {
 
 
 
-export default AboutPage;
+export default TextBox;
