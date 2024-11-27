@@ -1,5 +1,6 @@
 import React from 'react';
-import {BrowserRouter as  Route, BrowserRouter, Routes} from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+
 
 import BannerPage from './pages/BannerPage';
 import ButtonPage from './pages/ButtonPage';
@@ -7,11 +8,13 @@ import ToglePage from './pages/ToglePage';
 import TextBox from './pages/TextBox';
 import Ba from './pages/Ba';
 import Main from './pages/Main';
+import Header from './components/Header';
 
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
+        <Header />
         <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/banner' element={<BannerPage />} />
@@ -21,7 +24,7 @@ function App() {
         <Route path='/ba' element={<Ba />} />
         </Routes>
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
