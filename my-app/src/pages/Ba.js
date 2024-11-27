@@ -13,7 +13,7 @@ function Ba() {
     
     return <>
     <Navbar />
-    <Header />
+
 
     <Tabs1 />
     <p>BasicGaugeBar</p>

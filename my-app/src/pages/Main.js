@@ -6,7 +6,7 @@ import Tabs1 from '../components/Tabs1'
 function Main() {
     return <>
     <Navbar />
-    <Header />
+
  
     <Tabs1 />
     
