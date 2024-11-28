@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Heading, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
+
 import Navbar from '../components/Navbar';
 
 import Tabs1 from '../components/Tabs1';
@@ -22,7 +22,7 @@ function BannerPage() {
   return (
     <>
     <Navbar />
-    <Header />
+  
    
     <Tabs1 />
     <Box p={4} bg="gray.50" minHeight="100vh">

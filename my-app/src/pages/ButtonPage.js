@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Header from '../components/Header';
+
 
 import Tabs1 from '../components/Tabs1';
 import BasicButton from '../components/button/BasicButton';
@@ -20,7 +20,7 @@ function ButtonPage() {
     
     return <>
     <Navbar />
-    <Header />
+
 
     <Tabs1 />
     
