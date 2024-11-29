@@ -32,6 +32,12 @@ function Header() {
           <Link as={RouterLink} to="/ba" fontWeight="bold">
             바
           </Link>
+          <Link as={RouterLink} to="/loadButton" fontWeight="bold">
+            파일첨부
+          </Link>
+          <Link as={RouterLink} to="/selectBoxPage" fontWeight="bold">
+            셀렉트박스
+          </Link>
         </Stack>
 
         {/* 다크 모드 전환 버튼 */}
