@@ -15,10 +15,12 @@ import ToggleButton from '../components/button/ToggleButton';
 import CustomStyledButton from '../components/button/CustomStyledButton';
 import CustomToggleButton from '../components/button/CustomToggleButton';
 import ToggleWithLabel from '../components/button/ToggleWithLabel';
+import Header from '../components/Header';
 
 function ButtonPage() {
     
     return <>
+          <Header />
     <Navbar />
 
 

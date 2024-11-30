@@ -22,6 +22,7 @@ import IconButtonGaugeController from '../components/ba/IconButtonGaugeControlle
 function Ba() {
     
     return <>
+          <Header />
     <Navbar />
 
 

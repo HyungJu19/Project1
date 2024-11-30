@@ -14,10 +14,12 @@ import HighlightedTextInput from '../components/textBox/HighlightedTextInput';
 import HookFormTextBox from '../components/textBox/HookFormTextBox';
 import ChakraTextBox from '../components/textBox/ChakraTextBox';
 import QuillTextBox from '../components/textBox/QuillTextBox';
+import Header from '../components/Header';
 
 function TextBox() {
     
     return <>
+          <Header />
     <Navbar />
 
 

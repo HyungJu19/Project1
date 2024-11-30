@@ -13,9 +13,11 @@ import GradientSelectBox from '../components/SelectBox/GradientSelectBox';
 import SmallSelectBox from '../components/SelectBox/SmallSelectBox';
 import AnimatedSelectBox10 from '../components/SelectBox/AnimatedSelectBox10';
 import PushDownSelectBox20 from '../components/SelectBox/AnimatedSelectBox20';
+import Header from '../components/Header';
 
 function SelectBoxPage() {
     return <>
+          <Header />
     <Navbar />
 
  

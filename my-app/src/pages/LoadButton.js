@@ -15,9 +15,11 @@ import CircularUploadButton from '../components/UploadButton/CircularUploadButto
 import TextAndFileUploadButton from '../components/UploadButton/TextAndFileUploadButton';
 import GradientUploadButton from '../components/UploadButton/GradientUploadButton';
 import SmallIconButton from '../components/UploadButton/SmallIconButton';
+import Header from '../components/Header';
 
 function LoadingButton() {
     return <>
+          <Header />
     <Navbar />
 
  

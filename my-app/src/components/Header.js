@@ -11,6 +11,7 @@ function Header() {
       color={colorMode === "light" ? "black" : "white"}
       p={4}
       boxShadow="sm"
+      w="100%"
     >
       <Stack direction="row" spacing={6} justifyContent="space-between" alignItems="center">
         <Stack direction="row" spacing={6}>

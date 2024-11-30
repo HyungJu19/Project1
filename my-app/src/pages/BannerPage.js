@@ -16,11 +16,13 @@ import ImageBanner from '../components/banner/ImageBanner';
 import HoverAnimationBanner from '../components/banner/HoverAnimationBanner';
 import CardStyleBanner from '../components/banner/CardStyleBanner';
 import ShadowEffectBanner from '../components/banner/ShadowEffectBanner';
+import Header from '../components/Header';
 
 
 function BannerPage() {
   return (
     <>
+          <Header />
     <Navbar />
   
    

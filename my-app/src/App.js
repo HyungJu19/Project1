@@ -1,7 +1,7 @@
 import React from "react";
 import { ChakraProvider, extendTheme, Box, Flex } from "@chakra-ui/react";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+
 import Main from "./pages/Main";
 import BannerPage from "./pages/BannerPage";
 import ButtonPage from "./pages/ButtonPage";
@@ -27,7 +27,7 @@ function App() {
   return (
     <ChakraProvider theme={customTheme}>
       <HashRouter>
-        <Header />
+  
         <Flex 
           pt={4}
           paddingTop="0px"
