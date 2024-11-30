@@ -1,41 +1,74 @@
 import React, { useState } from "react";
-import { Flex, Box, VStack, Heading, Divider, Button, Switch, FormControl, FormLabel, Input } from "@chakra-ui/react";
+import {
+  Flex,
+  Box,
+  VStack,
+  Heading,
+  Divider,
+  Button,
+  Switch,
+  FormControl,
+  FormLabel,
+  Input,
+  useToast,
+} from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 function ViewAndInput1() {
-  // 상태 관리
   const [liveComponents, setLiveComponents] = useState({
     mainImage: { active: false, value: null },
     greeting: { active: false, value: "" },
     message: { active: false, value: "" },
   });
 
-  const [savedComponents, setSavedComponents] = useState(null); // 저장된 데이터
+  const toast = useToast();
+  const navigate = useNavigate();
+
+  // 랜덤 ID 생성 함수
+  const generateRandomId = (length = 20) => {
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    return Array.from({ length }, () =>
+      characters.charAt(Math.floor(Math.random() * characters.length))
+    ).join("");
+  };
 
   // 저장 버튼 핸들러
   const handleSave = () => {
-    setSavedComponents({ ...liveComponents });
-    alert("Components saved successfully!");
-  };
+    const uniqueId = generateRandomId();
 
-  // 수정 버튼 핸들러
-  const handleEdit = () => {
-    setSavedComponents(null);
-  };
+    // 데이터를 localStorage에 저장
+    localStorage.setItem(uniqueId, JSON.stringify(liveComponents));
 
-  // 컴포넌트 상태 업데이트
-  const updateComponent = (key, value) => {
-    setLiveComponents((prev) => ({
-      ...prev,
-      [key]: { ...prev[key], value },
-    }));
-  };
+    const newUrl = `https://hyungju19.github.io/Project1/#/inputViewPage100/${uniqueId}`;
+    navigate(`/inputViewPage100/${uniqueId}`);
 
-  // 토글 상태 업데이트
-  const toggleComponent = (key) => {
-    setLiveComponents((prev) => ({
-      ...prev,
-      [key]: { ...prev[key], active: !prev[key].active },
-    }));
+    toast({
+      title: "Components saved!",
+      description: (
+        <>
+          URL created:{" "}
+          <Button
+            variant="link"
+            colorScheme="teal"
+            onClick={() => {
+              navigator.clipboard.writeText(newUrl);
+              toast({
+                title: "URL copied!",
+                status: "success",
+                duration: 2000,
+                isClosable: true,
+              });
+            }}
+          >
+            Copy URL
+          </Button>
+        </>
+      ),
+      status: "success",
+      duration: 5000,
+      isClosable: true,
+    });
   };
 
   return (
@@ -53,9 +86,7 @@ function ViewAndInput1() {
         alignItems="center"
         justifyContent="center"
       >
-        <Heading size="lg" color="teal.500" mb={6}>
-          Live View
-        </Heading>
+        
         <Box
           bg="gray.50"
           p={6}
@@ -74,7 +105,7 @@ function ViewAndInput1() {
             <>
               {liveComponents.mainImage.active && (
                 <Box mb={4}>
-                  <strong>Main Image:</strong>
+                  <strong>메인사진</strong>
                   <Box mt={2}>
                     {liveComponents.mainImage.value ? (
                       <img
@@ -90,12 +121,18 @@ function ViewAndInput1() {
               )}
               {liveComponents.greeting.active && (
                 <Box mb={4}>
-                  <strong>Greeting:</strong> {liveComponents.greeting.value}
+                  <strong>인삿말</strong> 
+                 <p>
+                  {liveComponents.greeting.value}
+                  </p>
                 </Box>
               )}
               {liveComponents.message.active && (
                 <Box mb={4}>
-                  <strong>Message:</strong> {liveComponents.message.value}
+                  <strong>전하고싶은말</strong> 
+                  <p>
+                  {liveComponents.message.value}
+                  </p>
                 </Box>
               )}
             </>
@@ -103,11 +140,6 @@ function ViewAndInput1() {
             "No components selected. Enable components to see them here."
           )}
         </Box>
-        {savedComponents && (
-          <Button colorScheme="teal" mt={4} onClick={handleEdit}>
-            Edit
-          </Button>
-        )}
       </Box>
 
       {/* 오른쪽 Input 영역 */}
@@ -121,19 +153,21 @@ function ViewAndInput1() {
         justifyContent="center"
       >
         <VStack spacing={6} w="full" maxW="400px">
-          <Heading size="lg" color="teal.500">
-            Input Area
-          </Heading>
-
+       
           {/* 메인 사진 */}
           <FormControl display="flex" alignItems="center">
             <FormLabel htmlFor="main-image-toggle" mb="0">
-              Main Image
+            메인 사진
             </FormLabel>
             <Switch
               id="main-image-toggle"
               isChecked={liveComponents.mainImage.active}
-              onChange={() => toggleComponent("mainImage")}
+              onChange={() =>
+                setLiveComponents((prev) => ({
+                  ...prev,
+                  mainImage: { ...prev.mainImage, active: !prev.mainImage.active },
+                }))
+              }
               colorScheme="teal"
             />
           </FormControl>
@@ -142,7 +176,13 @@ function ViewAndInput1() {
               type="file"
               accept="image/*"
               onChange={(e) =>
-                updateComponent("mainImage", URL.createObjectURL(e.target.files[0]))
+                setLiveComponents((prev) => ({
+                  ...prev,
+                  mainImage: {
+                    ...prev.mainImage,
+                    value: URL.createObjectURL(e.target.files[0]),
+                  },
+                }))
               }
             />
           )}
@@ -150,12 +190,18 @@ function ViewAndInput1() {
           {/* 인삿말 */}
           <FormControl display="flex" alignItems="center">
             <FormLabel htmlFor="greeting-toggle" mb="0">
-              Greeting
+            인삿말
             </FormLabel>
+      
             <Switch
               id="greeting-toggle"
               isChecked={liveComponents.greeting.active}
-              onChange={() => toggleComponent("greeting")}
+              onChange={() =>
+                setLiveComponents((prev) => ({
+                  ...prev,
+                  greeting: { ...prev.greeting, active: !prev.greeting.active },
+                }))
+              }
               colorScheme="teal"
             />
           </FormControl>
@@ -163,19 +209,29 @@ function ViewAndInput1() {
             <Input
               placeholder="Enter your greeting..."
               value={liveComponents.greeting.value}
-              onChange={(e) => updateComponent("greeting", e.target.value)}
+              onChange={(e) =>
+                setLiveComponents((prev) => ({
+                  ...prev,
+                  greeting: { ...prev.greeting, value: e.target.value },
+                }))
+              }
             />
           )}
 
           {/* 전하고 싶은 말 */}
           <FormControl display="flex" alignItems="center">
             <FormLabel htmlFor="message-toggle" mb="0">
-              Message
+            전하고 싶은 말
             </FormLabel>
             <Switch
               id="message-toggle"
               isChecked={liveComponents.message.active}
-              onChange={() => toggleComponent("message")}
+              onChange={() =>
+                setLiveComponents((prev) => ({
+                  ...prev,
+                  message: { ...prev.message, active: !prev.message.active },
+                }))
+              }
               colorScheme="teal"
             />
           </FormControl>
@@ -183,7 +239,12 @@ function ViewAndInput1() {
             <Input
               placeholder="Enter your message..."
               value={liveComponents.message.value}
-              onChange={(e) => updateComponent("message", e.target.value)}
+              onChange={(e) =>
+                setLiveComponents((prev) => ({
+                  ...prev,
+                  message: { ...prev.message, value: e.target.value },
+                }))
+              }
             />
           )}
 
@@ -200,7 +261,7 @@ function ViewAndInput1() {
               !liveComponents.message.active
             }
           >
-            Save
+            Save & Generate URL
           </Button>
         </VStack>
       </Box>
