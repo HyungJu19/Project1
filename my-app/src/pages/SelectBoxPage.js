@@ -11,6 +11,8 @@ import MultiColorSelectBox from '../components/SelectBox/MultiColorSelectBox';
 import AnimatedSelectBox from '../components/SelectBox/AnimatedSelectBox';
 import GradientSelectBox from '../components/SelectBox/GradientSelectBox';
 import SmallSelectBox from '../components/SelectBox/SmallSelectBox';
+import AnimatedSelectBox10 from '../components/SelectBox/AnimatedSelectBox10';
+import PushDownSelectBox20 from '../components/SelectBox/AnimatedSelectBox20';
 
 function SelectBoxPage() {
     return <>
@@ -21,10 +23,14 @@ function SelectBoxPage() {
     
     <p>BasicSelectBox</p>
     <BasicSelectBox />
-    <p>RoundedSelectBox</p>\
+    <p>RoundedSelectBox</p>
     <RoundedSelectBox />
     <p>OutlinedSelectBox</p>
     <OutlinedSelectBox />
+    <p>PushDownSelectBox20</p>
+    <PushDownSelectBox20 />
+    <p>AnimatedSelectBox10</p>
+    <AnimatedSelectBox10 />
     <p>FlatSelectBox</p>
     <FlatSelectBox />
     <p>IconSelectBox</p>
@@ -37,6 +43,7 @@ function SelectBoxPage() {
     <GradientSelectBox />
     <p>SmallSelectBox</p>
     <SmallSelectBox />
+
 
     </>
 

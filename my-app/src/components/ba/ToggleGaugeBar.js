@@ -12,7 +12,7 @@ function ToggleGaugeBar() {
   };
 
   return (
-    <Box width="100%" padding="4">
+    <Box width="100%" padding="4" w="300px" >
       <FormControl display="flex" alignItems="center">
         <FormLabel htmlFor="toggle-progress" mb="0">
           Toggle Gauge Progress

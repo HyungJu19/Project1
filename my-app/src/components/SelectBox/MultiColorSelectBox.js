@@ -10,6 +10,7 @@ function MultiColorSelectBox() {
       color="blue.900"
       _hover={{ borderColor: "blue.400", bg: "blue.100" }}
       _focus={{ borderColor: "purple.600", boxShadow: "0 0 5px purple" }}
+      w="300px" 
     >
       <option value="option1" style={{ color: "red" }}>
         Red Option

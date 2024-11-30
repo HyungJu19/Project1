@@ -21,12 +21,14 @@ function CardGaugeController() {
   const decrease = () => setValue((prev) => Math.max(prev - 10, 0));
 
   return (
-    <Box p={6}>
+    <Box p={6}w="500px" >
       <Card
         borderRadius="lg"
         boxShadow="md"
         p={6}
-        bg={colorMode === "light" ? "gray.100" : "gray.700"} // 다크 모드 배경
+        bg={colorMode === "light" ? "gray.100" : "gray.700"
+          
+        } // 다크 모드 배경
       >
         <CardBody textAlign="center">
           <Text

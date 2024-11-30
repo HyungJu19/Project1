@@ -10,6 +10,8 @@ import TextBox from "./pages/TextBox";
 import Ba from "./pages/Ba";
 import LoadButton from "./pages/LoadButton";
 import SelectBoxPage from "./pages/SelectBoxPage";
+import InputViewPage from "./pages/InputViewPage";
+import InputViewPage1 from "./pages/InputViewPage1";
 
 const customTheme = extendTheme({
   config: {
@@ -25,7 +27,7 @@ function App() {
         <Header />
         <Flex 
           pt={4}
-          minHeight="100vh" 
+          paddingTop="0px"
           justifyContent="center" 
           alignItems="center"
           flexDirection="column"
@@ -39,6 +41,8 @@ function App() {
             <Route path="/ba" element={<Ba />} />
             <Route path="/loadButton" element={<LoadButton />} />
             <Route path="/selectBoxPage" element={<SelectBoxPage />} />
+            <Route path="/inputViewPage" element={<InputViewPage />} />
+            <Route path="/inputViewPage1" element={<InputViewPage1 />} />
           </Routes>
         </Flex>
       </HashRouter>

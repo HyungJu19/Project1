@@ -11,6 +11,9 @@ import ErrorTextInput from '../components/textBox/ErrorTextInput';
 import RoundedTextInput from '../components/textBox/RoundedTextInput';
 import LimitedTextInput from '../components/textBox/LimitedTextInput';
 import HighlightedTextInput from '../components/textBox/HighlightedTextInput';
+import HookFormTextBox from '../components/textBox/HookFormTextBox';
+import ChakraTextBox from '../components/textBox/ChakraTextBox';
+import QuillTextBox from '../components/textBox/QuillTextBox';
 
 function TextBox() {
     
@@ -36,6 +39,12 @@ function TextBox() {
     <LimitedTextInput />
     <p>HighlightedTextInput</p>
     <HighlightedTextInput />
+    <p>HookFormTextBox</p>
+    <HookFormTextBox />
+    <p>ChakraTextBox</p>
+    <ChakraTextBox />
+    <p>QuillTextBox</p>
+    <QuillTextBox />
 
     </>
 

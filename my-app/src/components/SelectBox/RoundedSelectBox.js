@@ -8,6 +8,7 @@ function RoundedSelectBox() {
       bg="gray.100"
       _hover={{ bg: "gray.200" }}
       _focus={{ borderColor: "cyan.400" }}
+      w="300px" // 가로 크기 설정
     >
       <option value="option1">Option 1</option>
       <option value="option2">Option 2</option>

@@ -38,6 +38,13 @@ function Header() {
           <Link as={RouterLink} to="/selectBoxPage" fontWeight="bold">
             셀렉트박스
           </Link>
+          <Link as={RouterLink} to="/inputViewPage" fontWeight="bold">
+            뷰
+          </Link>
+          <Link as={RouterLink} to="/inputViewPage1" fontWeight="bold">
+            뷰1
+          </Link>
+
         </Stack>
 
         {/* 다크 모드 전환 버튼 */}

@@ -10,6 +10,7 @@ function IconSelectBox() {
       borderColor="gray.300"
       _hover={{ borderColor: "cyan.500" }}
       _focus={{ borderColor: "cyan.500", boxShadow: "0 0 5px cyan" }}
+      w="300px" 
     >
       <option value="option1">Option 1</option>
       <option value="option2">Option 2</option>

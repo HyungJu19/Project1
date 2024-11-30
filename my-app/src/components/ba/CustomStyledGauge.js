@@ -2,7 +2,7 @@ import { Progress, Box } from '@chakra-ui/react';
 
 function CustomStyledGauge() {
   return (
-    <Box width="100%" padding="4">
+    <Box width="100%" padding="4" w="300px" >
       <Progress
         value={50}
         size="lg"

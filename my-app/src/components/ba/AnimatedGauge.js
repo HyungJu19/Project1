@@ -16,7 +16,8 @@ function AnimatedGauge() {
   }, []);
 
   return (
-    <Box width="100%" padding="4">
+    <Box width="100%" padding="4"
+    w="300px" >
       <Progress value={progressValue} size="lg" colorScheme="blue" />
       <Text mt="2" textAlign="center">{`${progressValue}%`}</Text>
     </Box>
